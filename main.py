@@ -179,49 +179,52 @@ class Hamster(Rodant):
     super().__init__(name)
     self.hasfoodincheeks = False
   def stat(self):
-    if hasfoodincheeks == True:
-      print(self.name + ' has food in its cheeks')
+    if self.hasfoodincheeks == True:
+      print(self.name + ' has food in its cheeks***')
     else:
-      print(self.name + ' has no food in its cheeks')
+      print(self.name + ' has no food in its cheeks***')
   def live(self):
-    life = randint(1,4)
-    if life == 1:
-      if self.hasfoodincheeks == False:
-        print(self.name + ' put some food in its cheeks')
-        self.hasfoodincheeks = True
-      else:
-        print(self.name + ' ate their food in cheeks')
-        self.hasfoodincheeks = False
-    if life == 2:
-      super().eat()
-    if life == 3:
-      super().drink()
-    if life == 4:
-      super().sleep()    
+    for i in range(5):
+      life = randint(1,4)
+      if life == 1:
+        if self.hasfoodincheeks == False:
+          print(self.name + ' put some food in its cheeks')
+          self.hasfoodincheeks = True
+        else:
+          print(self.name + ' ate their food in cheeks')
+          self.hasfoodincheeks = False
+      if life == 2:
+        super().eat()
+      if life == 3:
+        super().drink()
+      if life == 4:
+        super().sleep()
+    self.stat()
 class Rat(Rodant):
   def __init__(self, name):
     super().__init__(name)
     self.issocial = True
   def stat(self):
     if self.issocial == True:
-      print(self.name + ' is social now')
+      print(self.name + ' is social now***')
     else: 
-      print(self.name + ' is not social now')
+      print(self.name + ' is not social now***')
   def live(self):
-    life = randint(1,4)
-    if life == 1:
-      if self.issocial == False:
-        print(self.name + ' became social')
-        self.issocial = True
-      else:
-        print(self.name + ' became unsocial')
-        self.issocial = False
-    if life == 2:
-      super().eat()
-    if life == 3:
-      super().drink()
-    if life == 4:
-      super().sleep() 
+    for i in range(5):
+      life = randint(1,4)
+      if life == 1:
+        if self.issocial == False:
+          print(self.name + ' became social')
+          self.issocial = True
+        else:
+          print(self.name + ' became unsocial')
+          self.issocial = False
+      if life == 2:
+        super().eat()
+      if life == 3:
+        super().drink()
+      if life == 4:
+        super().sleep() 
     self.stat()
 class Capybara(Rodant):
   def __init__(self,name):
@@ -230,42 +233,44 @@ class Capybara(Rodant):
     self.swimming = False
   def stat(self):
     if self.swimming == True:
-      print(self.name + ' is swimming')
+      print(self.name + ' is swimming***')
     else:
-      print(self.name + ' is not swimming')
+      print(self.name + ' is not swimming***')
     if self.hasafriend == True:
-      print(self.name +' has a great time with a friend')
+      print(self.name +' has a great time with a friend***')
     else:
-      print(self.name + ' is alone(')
+      print(self.name + ' is alone(***')
   def live(self):
-    life = randint(1,4)
-    if life == 1:
-      if self.swimming == False:
-        print(self.name + ' is swimming')
-        self.swimming = True
-      else:
-        print(self.name + ' stopped swimming')
-        self.swimming = False
-    if life == 2:
-      if self.hasafriend == False:
-        print(self.name + ' found a friend')
-        self.hasafriend = True
-      else:
-        print(self.name + ' lost a friend')
-        self.hasafriend = False
-    if life == 3:
-      super().eat()
-    if life == 4:
-      super().drink()
-    if life == 5:
-      super().sleep()
+    for i in range(5):
+      life = randint(1,4)
+      if life == 1:
+        if self.swimming == False:
+          print(self.name + ' is swimming')
+          self.swimming = True
+        else:
+          print(self.name + ' stopped swimming')
+          self.swimming = False
+      if life == 2:
+        if self.hasafriend == False:
+          print(self.name + ' found a friend')
+          self.hasafriend = True
+        else:
+          print(self.name + ' lost a friend')
+          self.hasafriend = False
+      if life == 3:
+        super().eat()
+      if life == 4:
+        super().drink()
+      if life == 5:
+        super().sleep()
     self.stat()
 hamster = Hamster('Daniel')
-for i in range(9):
+for i in range(1):
   hamster.live()
+  
 rat = Rat('Sofie')
-for o in range(9):
+for o in range(1):
   rat.live()
 capy = Capybara('Quandile')
-for p in range(9):
+for p in range(1):
   capy.live()
